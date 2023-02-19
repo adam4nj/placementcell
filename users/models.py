@@ -66,12 +66,10 @@ class Student(models.Model):
     age = models.SmallIntegerField(max_length=2)
     address = models.TextField(max_length=50)
     district = models.CharField(max_length=10)
-    state = models.TextChoices()
-    pin = models.PositiveIntegerField()
-    ph_no = models.PositiveIntegerField()
-    skill = models.CharField()
-    experience = models.SmallIntegerField()
-    batch = models.TextChoices()
+    state = models.CharField(max_length=10)
+    pin = models.PositiveIntegerField(max_length=6)
+    ph_no = models.PositiveIntegerField(max_length=10)
+    
 
 
     def __str__(self):
@@ -81,12 +79,12 @@ class Student(models.Model):
 class Company(models.Model):
     user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     email = models.EmailField()
-    company_name = models.CharField(max_length=10)
-    company_address = models.TextField(max_length=50)
+    c_name = models.CharField(max_length=10)
+    address = models.TextField(max_length=50)
     district = models.CharField(max_length=10)
-    state = models.TextChoices()
-    pin = models.PositiveIntegerField()
-    ph_no = models.PositiveIntegerField()
+    state = models.CharField(max_length=10)
+    pin = models.PositiveIntegerField(max_length=6)
+    ph_no = models.PositiveIntegerField(max_length=10)
 
     description = models.CharField(max_length=255)
 

@@ -43,18 +43,6 @@ INSTALLED_APPS = [
 ]
 
 
-SOCIALACCOUNT_PROVIDERS = {
-    "google": {
-        "SCOPE": [
-            "profile",
-            "email",
-        ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
-        }
-    }
-}
-
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [

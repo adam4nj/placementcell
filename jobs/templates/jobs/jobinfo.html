@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,12 +8,9 @@
 		
 		<meta name="generator" content="Astro v2.0.10">
 		<title>Placement Cell-JMC</title>
-<link rel="stylesheet" href="{% static 'jobs/css/home.80070a00.css' %}" />
-<link rel="stylesheet" href="{% static 'jobs/css/index.0da12c6b.css' %}" />
-<link rel="stylesheet" href="{% static 'jobs/css/home.0d552cbf.css' %}" />
-<link rel="stylesheet" href="{% static 'jobs/css/jobs.7ba94b6c.css' %}" />
-<script type="module" src="{% static 'jobs/js/hoisted.479bc010.js' %}"></script>
-</head>
+	<link rel="stylesheet" href="/_astro/home.80070a00.css" />
+<link rel="stylesheet" href="/_astro/home.0d552cbf.css" />
+<script type="module" src="/_astro/hoisted.479bc010.js"></script></head>
 	<body>
 		<header class="w-auto astro-5BLMO7YK">
 <nav class="flex items-center justify-between flex-wrap shadow-2xl bg-slate-100 p-4 dark:bg-slate-800 astro-5BLMO7YK">
@@ -60,78 +55,31 @@
     </div>
   </nav>
 
-</header><div class="flex flex-row dark:bg-slate-900 astro-7JF2FHDJ">
-		<main class="mx-auto w-1/2 astro-7JF2FHDJ">
-			<div class="astro-7JF2FHDJ">
-				<ul role="list" class="flex flex-col-reverse gap-4 link-card-grid my-5 astro-7JF2FHDJ">
+</header>
 
-          {% for each in jobs %}
-            <li class="link-card astro-DOHJNAO5">
-              <a href="https://docs.astro.build/" class="astro-DOHJNAO5">
-                <h2 class="astro-DOHJNAO5">{{ each.title }}</h2>
-                <p class="astro-DOHJNAO5">{{ each.location }}</p>
-                <p class="astro-DOHJNAO5">{{ each.date_posted }}</p>
-              </a>
-            </li>
-          {% endfor %}
+<div class="flex flex-row w-full dark:bg-slate-900">
+        <div class="w-3/4 text-left my-10 mx-auto leading-loose">
+            <h1 class="text-4xl text-left">Job Description</h1>
 
-				</ul>
-			</div>
-		</main>
-		<div class="w-1/4 mt-10 astro-7JF2FHDJ">
+            <div class="my-10">
+                <h2 class="text-xl my-5">Role: </h2>
+                <h2 class="text-xl my-5">Salary:</h2>
+                <h2 class="text-xl my-5">Tags:</h2>
+            </div>
 
-		<div class="w-fit space-y-4 p-4 items-center text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ">
-
-			<h4 class="text-center text-lg text-info astro-7JF2FHDJ">News</h4>
-		
-			<ol class="space-y-4 w-72 astro-7JF2FHDJ">
-				<li class="astro-7JF2FHDJ">
-					<div class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ" role="alert">
-						<div class="flex items-center justify-between astro-7JF2FHDJ">
-							<span class="sr-only astro-7JF2FHDJ">News</span>
-							<h3 class="font-medium astro-7JF2FHDJ">News 1</h3>
-						</div>
-					</div>
-				</li>
-				<li class="astro-7JF2FHDJ">
-					<div class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ" role="alert">
-						<div class="flex items-center justify-between astro-7JF2FHDJ">
-							<span class="sr-only astro-7JF2FHDJ">Review</span>
-							<h3 class="font-medium astro-7JF2FHDJ">4. Review</h3>
-						</div>
-					</div>
-				</li>
-				<li class="astro-7JF2FHDJ">
-					<div class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ" role="alert">
-						<div class="flex items-center justify-between astro-7JF2FHDJ">
-							<span class="sr-only astro-7JF2FHDJ">Review</span>
-							<h3 class="font-medium astro-7JF2FHDJ">4. Review</h3>
-						</div>
-					</div>
-				</li>
-				<li class="astro-7JF2FHDJ">
-					<div class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ" role="alert">
-						<div class="flex items-center justify-between astro-7JF2FHDJ">
-							<span class="sr-only astro-7JF2FHDJ">Review</span>
-							<h3 class="font-medium astro-7JF2FHDJ">4. Review</h3>
-						</div>
-					</div>
-				</li>
-				<li class="astro-7JF2FHDJ">
-					<div class="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 astro-7JF2FHDJ" role="alert">
-						<div class="flex items-center justify-between astro-7JF2FHDJ">
-							<span class="sr-only astro-7JF2FHDJ">Confirmation</span>
-							<h3 class="font-medium astro-7JF2FHDJ">5. Confirmation</h3>
-						</div>
-					</div>
-				</li>
-			</ol>
-		</div>
-	</div>
-	</div>
-	</body></html>
-
-<footer class="w-auto">
+            <div class="my-5">
+                <h4 class="text-2xl">Qualifications</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="w-auto">
     <div class="bg-gray-200 dark:bg-slate-800 px-4 pt-16 md:px-24 lg:px-8 mx-auto">
         <div class="grid gap-10 row-gap-6 mb-20 sm:grid-cols-2 lg:grid-cols-4 justify-center">
           <div class="sm:col-span-2">
@@ -200,3 +148,4 @@
         </div>
       </div>
 </footer>
+	</body></html>

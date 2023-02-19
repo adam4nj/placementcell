@@ -8,4 +8,4 @@ def joblist(request):
     context = {
         'jobs': Job.objects.all()
     }
-    return render(request, 'jobs/list.html', context)
+    return render(request, 'jobs/jobs.html', context)
