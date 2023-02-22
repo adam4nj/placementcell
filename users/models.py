@@ -63,12 +63,12 @@ class Student(models.Model):
     student_fname = models.CharField(max_length=10)
     student_lname = models.CharField(max_length=10)
     dob = models.DateField(max_length=10)
-    age = models.SmallIntegerField(max_length=2)
+    age = models.SmallIntegerField()
     address = models.TextField(max_length=50)
     district = models.CharField(max_length=10)
     state = models.CharField(max_length=10)
-    pin = models.PositiveIntegerField(max_length=6)
-    ph_no = models.PositiveIntegerField(max_length=10)
+    pin = models.PositiveIntegerField()
+    ph_no = models.PositiveIntegerField()
     
 
 
@@ -83,8 +83,8 @@ class Company(models.Model):
     address = models.TextField(max_length=50)
     district = models.CharField(max_length=10)
     state = models.CharField(max_length=10)
-    pin = models.PositiveIntegerField(max_length=6)
-    ph_no = models.PositiveIntegerField(max_length=10)
+    pin = models.PositiveIntegerField()
+    ph_no = models.PositiveIntegerField()
 
     description = models.CharField(max_length=255)
 
