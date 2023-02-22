@@ -11,7 +11,7 @@ class Job(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     last_date = models.DateField()
     company = models.ForeignKey(Company,on_delete=models.CASCADE)
-    salary = models.PositiveIntegerField(max_length=10)
+    salary = models.PositiveIntegerField()
     desc = models.TextField()
 
     def __str__(self):
