@@ -74,13 +74,13 @@
                             </button></span>
                         <ul tabindex="0"
                             class="dropdown-content menu text-sm py-1 shadow bg-base-100 rounded-box w-40 astro-5BLMO7YK">
-                            <li class="astro-5BLMO7YK"><a href="signup-student" class="astro-5BLMO7YK">For Students</a>
+                            <li class="astro-5BLMO7YK"><a href="{% url 'signup-student' %}" class="astro-5BLMO7YK">For Students</a>
                             </li>
-                            <li class="astro-5BLMO7YK"><a href="signup-company" class="astro-5BLMO7YK">For Companies</a>
+                            <li class="astro-5BLMO7YK"><a href="{% url 'signup-company' %}" class="astro-5BLMO7YK">For Companies</a>
                             </li>
                         </ul>
                     </div>
-                    <a href="login" class="astro-5BLMO7YK"><button
+                    <a href="{% url 'login' %}" class="astro-5BLMO7YK"><button
                             class="inline-block text-xs font-semibold transition-colors bg-indigo-500 hover:bg-indigo-400 text-white dark:bg-slate-300 dark:hover:bg-slate-100 dark:text-black py-2 px-5 rounded mt-4 lg:mt-0 ml-1 astro-5BLMO7YK">
                             Login
                         </button></a>
@@ -91,7 +91,6 @@
 
 
         {% block content %}{% endblock %}
-
 
 
         <footer class="w-auto">
