@@ -4,6 +4,7 @@ from django.db import transaction
 
 from .models import CustomUser, Student, Company
 
+#Student
 
 class StudentSignUpForm(UserCreationForm):
     pass
@@ -19,8 +20,14 @@ class StudentSignUpForm(UserCreationForm):
         user.save()
         Student.objects.create(user=user)
         return user
+    
+class StudentProfileForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = ['address','district','state','pin','ph_no']
 
-
+#Company
+        
 class CompanySignUpForm(UserCreationForm):
     pass
         
@@ -35,6 +42,11 @@ class CompanySignUpForm(UserCreationForm):
         user.save()
         Company.objects.create(user=user)
         return user
+    
+class CompanyProfileForm(forms.ModelForm):
+    class Meta:
+        model = Company
+        fields = ['c_name','address','district','state','pin','ph_no']
 
 
 
