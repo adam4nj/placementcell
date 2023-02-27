@@ -2,13 +2,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.shortcuts import redirect
 from django.views.generic import CreateView
-from .forms import StudentSignUpForm, CompanySignUpForm
+from .forms import StudentSignUpForm,StudentProfileForm, CompanySignUpForm, CompanyProfileForm
 from .models import CustomUser
 # Create your views here.
 
 class StudentSignUpView(CreateView):
     model = CustomUser
-    form_class = StudentSignUpForm
+    form_classes = {
+        's_signup': StudentSignUpForm,
+        's_profile': StudentProfileForm,
+    }
     template_name = 'users/signup-student.html'
 
     def get_context_data(self, **kwargs):
@@ -22,7 +25,10 @@ class StudentSignUpView(CreateView):
 
 class CompanySignUpView(CreateView):
     model = CustomUser
-    form_class = CompanySignUpForm
+    form_classes = {
+        'c_signup': CompanySignUpForm,
+        'c_profile': CompanyProfileForm,
+    }
     template_name = 'users/signup-company.html'
 
     def get_context_data(self, **kwargs):
