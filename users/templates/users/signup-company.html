@@ -9,7 +9,8 @@
 		
 		<meta name="generator" content="Astro v2.0.10">
 		<title>Placement Cell-JMC</title>
-	<link rel="stylesheet" href="{% static 'jobs/css/about.13844fb6.css' %}" /><script type="module" src="/_astro/hoisted.479bc010.js"></script></head>
+	<link rel="stylesheet" href="{% static 'jobs/css/about.13844fb6.css' %}" />
+    <script type="module" src="{% static 'jobs/js/hoisted.479bc010.js' %}"></script></head>
 	<body>
 		<main>
         <!-- component -->
@@ -28,6 +29,7 @@
                             </h1>
 
                             <form class="mt-4" action="#" method="POST">
+                                {% csrf_token %}
                                 <div class="grid grid-cols-1 divide-y divide-solid">
                                     <div class="grid grid-cols-3 grid-flow-row gap-4 mb-8">
                                         <div class="mt-4">

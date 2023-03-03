@@ -12,6 +12,7 @@ class StudentSignUpView(CreateView):
         's_signup': StudentSignUpForm,
         's_profile': StudentProfileForm,
     }
+    fields = []
     template_name = 'users/signup-student.html'
 
     def get_context_data(self, **kwargs):
@@ -29,6 +30,7 @@ class CompanySignUpView(CreateView):
         'c_signup': CompanySignUpForm,
         'c_profile': CompanyProfileForm,
     }
+    fields = []
     template_name = 'users/signup-company.html'
 
     def get_context_data(self, **kwargs):
